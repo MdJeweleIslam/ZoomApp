@@ -13,8 +13,8 @@ Myvideo.muted = true;
 
 
 navigator.mediaDevices.getUserMedia({
-	video = true,
-	audio = true,
+	video: true,
+	audio: true
 }).then(stream => {
 	addVideoStream(Myvideo, stream)
 })
@@ -32,6 +32,6 @@ function addVideoStream(video, stream){
 	video.srcObject = stream
 	video.addEventListener('loadedmetadata', () => {
 		video.play()
-		videGrid.append(video)
 	})
+	videGrid.append(video)
 }
